@@ -1,5 +1,11 @@
 <?php
     $x = 20;
+
+    $menu = [
+        "Lẩu vịt",
+        "Thịt chó",
+        "Rắn xào lăn"
+    ];
 ?>
 <!doctype html>
 <html lang="en">
@@ -19,5 +25,13 @@
         <?php else: ?>
         <h3>lớp vắng<?php echo $x;?></h3>
         <?php endif;?>
+
+    <h2>Danh sách món ăn: </h2>
+    <ul>
+        <?php foreach ($menu as $item):?>
+            <li><?php echo $item;?></li>
+        <?php endforeach;?>
+    </ul>
+    <?php include ("footer.php")?>
 </body>
 </html>
