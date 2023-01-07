@@ -1,4 +1,5 @@
 <?php
+
     $x = 20;
 
     $menu = [
@@ -6,17 +7,19 @@
         "Thịt chó",
         "Rắn xào lăn"
     ];
+session_start();
+$email = isset($_SESSION["email"])?$_SESSION["email"]:"";
 ?>
+
+
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+
+    <?php include ("header.php");?>
 </head>
 <body>
+<h1>Hello world <?php echo $email;?></h1>
     <h1 style="color: darkred">Hello world</h1>
     <h2>Số lượng sinh viên: <?php echo $x + 5 ;// chỗ này viết được code PHP?> </h2>
 
